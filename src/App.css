@@ -1,0 +1,10 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* 부모 요소가 100% 높이를 가짐 */
+  background-color: white;
+}
+
+.App {
+  text-align: center;
+}
