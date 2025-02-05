@@ -1,12 +1,8 @@
 import React, { useState } from "react";
 import * as S from "./Main.style";
+import Nickname from "./Nickname";
 
 export function Main() {
-  const [name, setName] = useState("");
-
-  const handleInputChange = (e) => {
-    setName(e.target.value);
-  };
 
   const handleStartClick = () => {
     alert("이 페이지는 밸런스 게임 페이지입니다.");
@@ -20,14 +16,7 @@ export function Main() {
     <S.MainContainer>
       <div className="app-container">
         <h1>나는 근본 인간일까?</h1>
-        <div className="input-container">
-          <input
-            type="text"
-            placeholder="닉네임"
-            value={name}
-            onChange={handleInputChange}
-          />
-        </div>
+        <Nickname/>
         <div className="button-container">
           <button onClick={handleStartClick}>시작</button>
           <button onClick={handleDetailClick}>결과</button>
