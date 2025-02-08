@@ -1,8 +1,15 @@
 import React, { useState } from "react";
 import * as S from "./Main.style";
 import Nickname from "./Nickname";
+import { useNavigate } from "react-router-dom";
+import Button from "./Button"
 
-export function Main() {
+
+export function Main(props) {
+
+  const navigate = useNavigate
+  const [title, setTitle] = useState("");
+  const [content, setContent] = useState("");
 
   const handleStartClick = () => {
     alert("이 페이지는 밸런스 게임 페이지입니다.");
@@ -21,7 +28,14 @@ export function Main() {
           <button onClick={handleStartClick}>시작</button>
           <button onClick={handleDetailClick}>결과</button>
         </div>
+        <Button
+          title="시작"
+          onClick={ () => { navigate("/category");
+          }}
+          />
       </div>
     </S.MainContainer>
   );
 }
+
+export default Main;
