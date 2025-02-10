@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Main, Category, Result, Game } from "./components";
+import { Main, Category, Result, Game, End } from "./components";
 import "./App.css";
 
 function App() {
