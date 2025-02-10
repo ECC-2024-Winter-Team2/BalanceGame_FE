@@ -9,7 +9,7 @@ function App() {
         <Route index element={<Main />} />
         <Route path="category" element={<Category />} />
         {/* TODO: 다이나믹 라우팅 */}
-        <Route path=":game" element={<Game />} />
+        <Route path="game/:id" element={<Game />} />
         <Route path="result" element={<Result />} />
       </Routes>
     </BrowserRouter>

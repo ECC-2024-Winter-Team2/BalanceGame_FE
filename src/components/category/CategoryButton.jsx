@@ -7,6 +7,7 @@ const StyledButton = styled.button`
     border-width: 1px;
     border-width: thin thin;
     border-color: white;
+    background: linear-gradient(to right, #A093FF, #9B8AFF);
     color: white;
     cursor: pointer;
 `;

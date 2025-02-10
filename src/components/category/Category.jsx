@@ -11,7 +11,7 @@ export function Category() {
       <CategoryButton
           key={index}
           title={category}
-          onClick={() => { navigate("/game"); }}/>))}
+          onClick={() => { navigate("/game/1"); }}/>))}
     </div>
   );
 }
