@@ -29,7 +29,7 @@ export function Main() {
            <Button
           title="결과보기"
           onClick={() => {
-            navigate("/category");
+            navigate("/result");
           }}
         />
       </div>
