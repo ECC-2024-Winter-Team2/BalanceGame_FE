@@ -1,28 +1,19 @@
-import React from "react";
-
-import {
-  BrowserRouter,
-  Route,
-  Routes,
-  useNavigate
-} from "react-router-dom"
-
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Main, Category, Result, Game } from "./components";
 import "./App.css";
-import { Main } from "./components";
-import CategoryPage from "./components/main/CategoryPage";
-import styled from "styled-components";
 
-function App(props) {
-  const navigate = useNavigate
+function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route index element={<Main />} />
-        <Route path="category" element={<CategoryPage />} />
+        <Route path="category" element={<Category />} />
+        {/* TODO: 다이나믹 라우팅 */}
+        <Route path=":game" element={<Game />} />
+        <Route path="result" element={<Result />} />
       </Routes>
     </BrowserRouter>
   );
 }
 
 export default App;
-
