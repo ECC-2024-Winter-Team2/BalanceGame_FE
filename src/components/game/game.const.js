@@ -23,7 +23,7 @@ export const GAME_DATA = {
     {
       orderIndex: 5,
       questionText: "이상형과",
-      choices: ["평생\n친구하기", "이상형과|n1년\n연애하고\n헤어지기"],
+      choices: ["평생\n친구하기", "이상형과\n1년\n연애하고\n헤어지기"],
     },
     {
       orderIndex: 6,
