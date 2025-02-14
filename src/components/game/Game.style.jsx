@@ -52,3 +52,26 @@ export const ChoiceRight = styled.div`
   color: white;
   background-color: transparent;
 `;
+
+export const BackButton = styled.div`
+  img{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+    width: 50px;  /* 너비 조절 */
+    height: auto; /* 비율 유지 */
+}
+`;
+
+export const HomeButton = styled.div`
+  img{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    transform: translate(-50%, -50%);
+    width: 50px;  /* 너비 조절 */
+    height: auto; /* 비율 유지 */
+}
+`;
+
