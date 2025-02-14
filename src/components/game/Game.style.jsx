@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const GameContainer = styled.div`
+  white-space: pre-wrap;
   display: flex;
   justify-content: space-between; /* 내부 요소를 균형 있게 배치 */
   align-items: center;
