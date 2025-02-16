@@ -37,7 +37,7 @@ export const GAME_DATA = {
     },
     {
       orderIndex: 8,
-      questionText: "싸운\n후",
+      questionText: "싸운 후",
       choices: ["바로 풀기", "시간 두기"],
     },
     {
@@ -117,7 +117,7 @@ export const GAME_DATA = {
     {
       orderIndex: 3,
       questionText: "항문에 이빨이 자라면",
-      choices: ["치과를 간다", "비뇨기괴를 간다"],
+      choices: ["치과를 간다", "항문외과를 간다"],
     },
     {
       orderIndex: 4,

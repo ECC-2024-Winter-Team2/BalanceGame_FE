@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useNavigate, useParams } from "react-router-dom";
 import * as S from "./Game.style";
 import { GAME_DATA } from "./game.const";
@@ -18,6 +19,15 @@ export function Game({ questionText, orderIndex, choices }) {
     return item.orderIndex == postId;
   });
 
+  useEffect(() => {
+    if (!quiz) { 
+      navigate('/percentage');
+    }}, [quiz, navigate, category]);
+
+    if (!quiz) {
+      return null;
+    }
+
   return (
     <S.GameContainer>
       {/* TODO: 아이콘 추가 */}
@@ -29,8 +39,6 @@ export function Game({ questionText, orderIndex, choices }) {
       <S.HomeButton>
         <img onClick={() => navigate('/')} src={homebutton} />
       </S.HomeButton>
-
-    
 
      <S.QuestionText>{quiz.questionText}</S.QuestionText>
      <S.ChoiceLeft onClick={() => navigate(`/game/${category}/${postId + 1}`)}>

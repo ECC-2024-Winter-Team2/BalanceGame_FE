@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Main, Category, Result, Game, End } from "./components";
+import { Main, Category, Result, Game, Percentage } from "./components";
 import "./App.css";
 
 function App() {
@@ -11,6 +11,7 @@ function App() {
         {/* TODO: 다이나믹 라우팅 */}
         <Route path="game/:category/:id" element={<Game />} />
         <Route path="result" element={<Result />} />
+        <Route path="percentage" element={<Percentage />} />
       </Routes>
     </BrowserRouter>
   );

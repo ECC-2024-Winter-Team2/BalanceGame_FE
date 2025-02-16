@@ -22,9 +22,12 @@ export const QuestionText = styled.div`
   font-size: 50px;
   font-weight: bold;
   text-align: center;
-  border: 3px solid white;
+  border: 3px solid black;
   background-color: white;
+  border-radius: 20%;
+  overflow: hidden;
   z-index: 10;
+
 `;
 
 export const ProgressBar = styled.div``;
@@ -39,6 +42,8 @@ export const ChoiceLeft = styled.div`
   font-weight: bold;
   color: white;
   background-color: transparent;
+  text-align: center;
+  text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
 `;
 
 export const ChoiceRight = styled.div`
@@ -51,6 +56,8 @@ export const ChoiceRight = styled.div`
   font-weight: bold;
   color: white;
   background-color: transparent;
+  text-align: center;
+  text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
 `;
 
 export const BackButton = styled.div`
