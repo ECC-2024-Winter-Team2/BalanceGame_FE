@@ -8,7 +8,6 @@ function App() {
       <Routes>
         <Route index element={<Main />} />
         <Route path="category" element={<Category />} />
-        {/* TODO: 다이나믹 라우팅 */}
         <Route path="game/:category/:id" element={<Game />} />
         <Route path="result" element={<Result />} />
         <Route path="percentage" element={<Percentage />} />
