@@ -7,9 +7,6 @@ import * as S from "./Main.style";
 export function Main() {
   const navigate = useNavigate();
 
-  const [title, setTitle] = useState("");
-  const [content, setContent] = useState("");
-
   const handleStartClick = () => {
     alert("이 페이지는 밸런스 게임 페이지입니다.");
   };
@@ -23,14 +20,16 @@ export function Main() {
       <div className="app-container">
         <h1>나는 근본 인간일까?</h1>
         <Nickname />
-        <div className="button-container">
-          <button onClick={handleStartClick}>시작</button>
-          <button onClick={handleDetailClick}>결과</button>
-        </div>
         <Button
-          title="시작"
+          title="시작하기"
           onClick={() => {
             navigate("/category");
+          }}
+        />
+           <Button
+          title="결과보기"
+          onClick={() => {
+            navigate("/result");
           }}
         />
       </div>
