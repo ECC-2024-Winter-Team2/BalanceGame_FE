@@ -5,34 +5,29 @@ export const GameContainer = styled.div`
   display: flex;
   justify-content: space-between; /* 내부 요소를 균형 있게 배치 */
   align-items: center;
-  width: 100vw;
-  height: 100vh; /* 전체 화면을 차지 */
-  padding: 20px;
-  background: linear-gradient(to right, #87CEFA 50%, #FFB6C1 50%);
   position: relative;
 `;
 
 export const QuestionText = styled.div`
   position: absolute;
-  top: 5%;
+  top: 40px;
   left: 50%;
   transform: translateX(-50%);
   width: 300px;
-  padding: 10px;
+  padding: 16px;
   font-size: 50px;
   font-weight: bold;
   text-align: center;
   border: 3px solid black;
   background-color: white;
-  border-radius: 20%;
+  border-radius: 47%;
   overflow: hidden;
   z-index: 10;
-
 `;
 
 export const ProgressBar = styled.div``;
 
-export const ChoiceLeft = styled.div`
+export const ChoiceContainer = styled.div`
   width: 50vw; /* 왼쪽 반 차지 */
   height: 100vh; /* 전체 화면 높이 */
   display: flex;
@@ -43,42 +38,46 @@ export const ChoiceLeft = styled.div`
   color: white;
   background-color: transparent;
   text-align: center;
-  text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
+  text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black,
+    2px 2px 0 black;
+  cursor: pointer;
 `;
 
-export const ChoiceRight = styled.div`
-  width: 50vw; /* 오른쪽 반 차지 */
-  height: 100vh; /* 전체 화면 높이 */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 100px;
-  font-weight: bold;
-  color: white;
-  background-color: transparent;
-  text-align: center;
-  text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
+export const ChoiceLeft = styled(ChoiceContainer)`
+  background-color: #87cefa;
+
+  &:hover {
+    background-color: #66a6ce;
+  }
 `;
 
-export const BackButton = styled.div`
-  img{
-    position: absolute;
-    top: 5%;
-    left: 5%;
-    transform: translate(-50%, -50%);
-    width: 50px;  /* 너비 조절 */
-    height: auto; /* 비율 유지 */
-}
+export const ChoiceRight = styled(ChoiceContainer)`
+  background-color: #ffb6c1;
+
+  &:hover {
+    background-color: #ce8797;
+  }
 `;
 
-export const HomeButton = styled.div`
-  img{
-    position: absolute;
-    top: 5%;
-    right: 5%;
-    transform: translate(-50%, -50%);
-    width: 50px;  /* 너비 조절 */
-    height: auto; /* 비율 유지 */
-}
+export const ButtonContainer = styled.div`
+  position: absolute;
+  top: 20px;
+  cursor: pointer;
+
+  &:hover img {
+    transform: scale(1.2);
+  }
+
+  img {
+    transition: transform 0.3s ease-in-out;
+    width: 50px;
+  }
 `;
 
+export const BackButton = styled(ButtonContainer)`
+  left: 10px;
+`;
+
+export const HomeButton = styled(ButtonContainer)`
+  right: 10px;
+`;

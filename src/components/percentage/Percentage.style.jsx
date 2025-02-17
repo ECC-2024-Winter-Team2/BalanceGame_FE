@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
-export const PercentageContainer = styled.button`
-`;
+export const PercentageContainer = styled.div``;
 
 export const TopContainer = styled.button`
   position: absolute;
@@ -17,7 +16,8 @@ export const TopContainer = styled.button`
   background-color: lightblue;
   z-index: 10;
   color: white;
-  text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
+  text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black,
+    2px 2px 0 black;
 `;
 
 export const RoundPercentage = styled.button`
@@ -32,10 +32,11 @@ export const RoundPercentage = styled.button`
   text-align: center;
   border: 3px solid black;
   border-radius: 50%;
-  background: linear-gradient(to right, #A093FF, #9B8AFF);
+  background: linear-gradient(to right, #a093ff, #9b8aff);
   overflow: hidden;
   color: white;
-  text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
+  text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black,
+    2px 2px 0 black;
 `;
 
 export const ResultButton = styled.button`
@@ -49,8 +50,14 @@ export const ResultButton = styled.button`
   font-weight: bold;
   text-align: center;
   border: 3px solid black;
-  background-color: lightblue;
+  background-color: #add8e6;
   z-index: 10;
   color: white;
-  text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
+  text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black,
+    2px 2px 0 black;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #658793;
+  }
 `;

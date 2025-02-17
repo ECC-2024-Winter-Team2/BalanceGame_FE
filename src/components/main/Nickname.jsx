@@ -1,23 +1,22 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
-export function  Nickname(props){
-
-  const [name, setName] = useState("");
+export function Nickname() {
+  const [nickname, setNickname] = useState("");
 
   const handleInputChange = (e) => {
-    setName(e.target.value);
+    setNickname(e.target.value);
   };
 
-  return(
-    <div className="input-container">
+  return (
+    <div>
       <input
-      type="text"
-      placeholder="닉네임"
-      value={name}
-      onChange={handleInputChange}
-    />
-  </div>
-  )
+        type="text"
+        placeholder="닉네임"
+        value={nickname}
+        onChange={handleInputChange}
+      />
+    </div>
+  );
 }
 
-export default Nickname
+export default Nickname;

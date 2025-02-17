@@ -1,5 +1,5 @@
 export const GAME_DATA = {
-   연애: [
+  love: [
     {
       orderIndex: 1,
       questionText: "나이",
@@ -49,9 +49,9 @@ export const GAME_DATA = {
       orderIndex: 10,
       questionText: "성격",
       choices: ["외향적", "내향적"],
-    }
+    },
   ],
-  음식: [
+  food: [
     {
       orderIndex: 1,
       questionText: "김밥",
@@ -101,9 +101,9 @@ export const GAME_DATA = {
       orderIndex: 10,
       questionText: "밥",
       choices: ["비빔밥", "볶음밥"],
-    }
+    },
   ],
-  병맛: [
+  sick: [
     {
       orderIndex: 1,
       questionText: "카레",
@@ -153,9 +153,9 @@ export const GAME_DATA = {
       orderIndex: 10,
       questionText: "똥",
       choices: ["밥 먹는 곳에서\n똥 싸기", "똥 싸는 곳에서\n밥 먹기"],
-    }
+    },
   ],
-  인생: [
+  life: [
     {
       orderIndex: 1,
       questionText: "삶의 태도",
@@ -205,7 +205,6 @@ export const GAME_DATA = {
       orderIndex: 10,
       questionText: "돈",
       choices: ["FLEX", "저축"],
-    }
+    },
   ],
-
 };
