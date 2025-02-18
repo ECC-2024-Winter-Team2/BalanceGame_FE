@@ -1,4 +1,5 @@
 import { useState } from "react";
+import styled from "styled-components";
 
 export function Nickname() {
   const [nickname, setNickname] = useState("");
@@ -11,7 +12,7 @@ export function Nickname() {
     <div>
       <input
         type="text"
-        placeholder="닉네임"
+        placeholder="닉네임을 입력하세요"
         value={nickname}
         onChange={handleInputChange}
       />
