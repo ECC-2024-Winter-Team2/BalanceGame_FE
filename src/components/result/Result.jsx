@@ -1,19 +1,44 @@
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import * as S from "./Result.style";
+import { CATEGORY_DATA } from "./category.const";
+import * as GS from "../game/Game.style";
+import homebutton from "./homebutton.png"
+import backbutton from "./backbutton.png"
+
 export function Result() {
-  // TODO: 데이터 연동 후 제거 필요
-  const categories = [
-    { categoryId: 1, name: "연애" },
-    { categoryId: 2, name: "음식" },
-    { categoryId: 3, name: "병맛" },
-    { categoryId: 4, name: "인생" },
-  ];
+  const navigate = useNavigate();
+  const handleBack = () => {
+    navigate(-1);
+  };
+
+
+  const [categories, setCategories] = useState(CATEGORY_DATA);
+
+  const CategoryButton = ({ title, onClick }) => {
+    return <S.ResultCategories onClick={onClick}>{title}</S.ResultCategories>;
+  };
 
   return (
     <div>
-      <div>결과</div>
-      {/* TODO: 코드 이해하기 */}
-      {categories.map((category) => (
-        <div key={category.name}>{category.name}</div>
+      <S.ResultContainer>
+      {categories.map(({ categoryName, categoryId }) => (
+        <CategoryButton
+          key={categoryName}
+          title={categoryName}
+          onClick={() => {
+            navigate(`/`);
+          }}
+        />
       ))}
+      <GS.BackButton>
+        <img onClick={handleBack} src={backbutton} alt="뒤로가기" />
+      </GS.BackButton>
+      <GS.HomeButton>
+        <img onClick={() => navigate("/")} src={homebutton} alt="홈으로" />
+      </GS.HomeButton>
+
+      </S.ResultContainer>
     </div>
   );
 }

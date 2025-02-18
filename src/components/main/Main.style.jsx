@@ -43,7 +43,7 @@ export const NicknameContainer=styled.div`
   export const ShuBung=styled.div`
   position: absolute;
   top: 40px;
-  right: 600px;
+  right: 500px;
   width: 40px;
   `;
 
