@@ -1,5 +1,5 @@
 export const COMMON_API_URL =
-  "https://ec2-13-124-150-183.ap-northeast-2.compute.amazonaws.com/api";
+  "http://ec2-43-200-237-253.ap-northeast-2.compute.amazonaws.com:8080/api";
 
 export const API_URL = {
   nickname: `${COMMON_API_URL}/user/username`,
