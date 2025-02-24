@@ -51,7 +51,21 @@ export const NicknameContainer=styled.div`
   font-size: 18px;
   font-weight: bold;
   color: white;
-   text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
-   writing-mode: horizontal-tb;
-   white-space: nowrap;
+  text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
+  writing-mode: horizontal-tb;
+  white-space: nowrap;
+`;
+
+export const ButtonStart= styled.div`
+position: absolute;
+top: 700px;
+left: 30%;
+transform: translateX(-50%);
+`;
+
+export const ButtonResult= styled.div`
+position: absolute;
+top: 700px;
+left: 70%;
+transform: translateX(-50%);
 `;
