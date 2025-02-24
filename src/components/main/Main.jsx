@@ -33,6 +33,9 @@ export function Main() {
   
       const data = await response.json();
       console.log("✅ 닉네임 저장 응답:", data);
+      setUserId(data.userId);
+      localStorage.setItem("userId", data.userId); // ✅ localStorage에 저장
+
   
       // 🛑 닉네임이 중복된 경우 alert 표시 후 중단
       if (data.error === "이미 존재하는 닉네임입니다.") {
@@ -65,7 +68,7 @@ export function Main() {
   const savedUserId = await postNickname();
   setIsSubmitting(false); // 🟢 요청 완료 후 다시 활성화
 
-  if (savedUserId) {
+    if (savedUserId) {
     navigate("/category"); // ✅ 닉네임 저장 후 페이지 이동
   }
 };
