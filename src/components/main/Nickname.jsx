@@ -1,13 +1,11 @@
 import { useState } from "react";
 import styled from "styled-components";
 
-export function Nickname() {
-  const [nickname, setNickname] = useState("");
-
+export function Nickname({ nickname, setNickname }) { // 🟢 props로 상태 받기
   const handleInputChange = (e) => {
     setNickname(e.target.value);
   };
-
+  
   return (
     <div>
       <input
@@ -21,3 +19,4 @@ export function Nickname() {
 }
 
 export default Nickname;
+

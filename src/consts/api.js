@@ -4,5 +4,5 @@ export const COMMON_API_URL =
 export const API_URL = {
   nickname: `${COMMON_API_URL}/user/username`,
   categories: `${COMMON_API_URL}/categories`,
-  choices: `${COMMON_API_URL}/choices`,
+  choices: `${COMMON_API_URL}/choices`
 };

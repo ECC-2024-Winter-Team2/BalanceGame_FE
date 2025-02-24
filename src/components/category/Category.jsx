@@ -8,26 +8,23 @@ import { API_URL } from "../../consts";
 export function Category() {
   const navigate = useNavigate();
 
-  const [categories, setCategories] = useState(CATEGORY_DATA);
+  const [categories, setCategories] = useState([]);
 
   const getCategories = async () => {
-    const { categories } = await fetchApi(API_URL.categories, {
-      method: "GET",
+    const response= await fetchApi(API_URL.categories, {method: "GET",
     });
-    setCategories(categories);
+    setCategories(response);
   };
 
   useEffect(() => {
     getCategories();
-    // TODO: 확인 후 제거
-    console.log(categories);
   }, []);
 
   return (
     <div>
       {categories.map(({ categoryName, categoryId }) => (
         <CategoryButton
-          key={categoryName}
+          key={categoryId}
           title={categoryName}
           onClick={() => {
             navigate(`/game/${CATEGORY_PATH[categoryId - 1]}/1`);
